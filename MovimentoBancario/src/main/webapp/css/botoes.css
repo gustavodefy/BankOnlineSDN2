@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/05/2016, 20:46:14
+    Author     : Thayro
+*/
+
+.depositar {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #83c41a;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #b8e356 5%, #a5cc52 100% );
+	background:-ms-linear-gradient( top, #b8e356 5%, #a5cc52 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8e356', endColorstr='#a5cc52');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #b8e356), color-stop(100%, #a5cc52) );
+	background-color:#b8e356;
+	color:#ffffff;
+	display:inline-block;
+	text-shadow:1px 1px 0px #86ae47;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #d9fbbe;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #d9fbbe;
+ 	box-shadow:inset 1px 1px 0px 0px #d9fbbe;
+}.depositar:hover {
+	background:-moz-linear-gradient( center top, #a5cc52 5%, #b8e356 100% );
+	background:-ms-linear-gradient( top, #a5cc52 5%, #b8e356 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5cc52', endColorstr='#b8e356');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #a5cc52), color-stop(100%, #b8e356) );
+	background-color:#a5cc52;
+}.depositar:active {
+	position:relative;
+	top:1px;
+}
+.sacar {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #d83526;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+	background:-ms-linear-gradient( top, #fe1a00 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #fe1a00), color-stop(100%, #ce0100) );
+	background-color:#fe1a00;
+	color:#ffffff;
+	display:inline-block;
+	text-shadow:1px 1px 0px #b23e35;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #f29c93;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #f29c93;
+ 	box-shadow:inset 1px 1px 0px 0px #f29c93;
+}.sacar:hover {
+	background:-moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+	background:-ms-linear-gradient( top, #ce0100 5%, #fe1a00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ce0100), color-stop(100%, #fe1a00) );
+	background-color:#ce0100;
+}.sacar:active {
+	position:relative;
+	top:1px;
+}
+.consultar {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #84bbf3;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	background:-ms-linear-gradient( top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #79bbff), color-stop(100%, #378de5) );
+	background-color:#79bbff;
+	color:#ffffff;
+	display:inline-block;
+	text-shadow:1px 1px 0px #528ecc;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #bbdaf7;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #bbdaf7;
+ 	box-shadow:inset 1px 1px 0px 0px #bbdaf7;
+}.consultar:hover {
+	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+	background:-ms-linear-gradient( top, #378de5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #378de5), color-stop(100%, #79bbff) );
+	background-color:#378de5;
+}.consultar:active {
+	position:relative;
+	top:1px;
+}

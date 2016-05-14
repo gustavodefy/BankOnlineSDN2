@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/05/2016, 21:03:59
+    Author     : Thayro
+*/
+
+.iframePrincipal{
+    background-color: white;
+    border-style: solid;
+    box-shadow: 0px 0px 100px black;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+body, input {
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+div.mensagem input{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    background-color: white;
+    border-color: white;
+    font-family: "Arial";
+    color: #ce0100; 
+}
+
+input[type="text"],
+
+textarea {
+    padding: 0.2em;
+    border: 1px solid #CCC;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+}
+
+input:focus{
+    background: #FFC;
+}
