@@ -9,13 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="../css/botoes.css" type= "text/css">
+        <link rel="stylesheet" href="./css/botoes.css" type= "text/css">
         <title>JSP Page</title>
     </head>
     <body>
         <table width="641" border="0" align="center">
   <tr>
-      <td colspan="2"><div align="center"><img src="../img/logobankonline.png" width="710" height="181"></div></td>
+      <td colspan="2"><div align="center"><img src="./img/logobankonline.png" width="710" height="181"></div></td>
     </tr>
   <tr>
     <td width="368"><div align="right">Conta</div></td>
