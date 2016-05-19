@@ -11,13 +11,13 @@ import java.sql.Date;
  *
  * @author ResVUT42
  */
-public class Contas {
+public class Conta {
     
     private int conta;
     private double saldo;
     private Date dtLcto;
 
-    public Contas() {
+    public Conta() {
         this.conta = 0;
         this.dtLcto = null;
         this.saldo = 0;
