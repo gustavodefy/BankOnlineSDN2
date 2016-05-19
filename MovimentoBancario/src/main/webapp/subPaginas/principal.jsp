@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,12 +22,12 @@
                     <td colspan="2"><div align="center"><img src="./img/logobankonline.png" width="710" height="181"></div></td>
                 </tr>
                 <tr>
-                    <td width="200"><div align="right">Conta</div></td>
-                    <td width="338"><input type="text" id="nome" name="nome" required="required"></td>
+                    <td width="200"><div align="right">Nº Conta</div></td>
+                    <td width="338"><input type="text" id="nconta" name="nconta" required="required" value="<c:out value="${conta.nConta}" />"></td>
                 </tr>
                 <tr>
                     <td><div align="right">Valor</div></td>
-                    <td><input type="text" id="nome" name="nome" required="required"></td>
+                    <td><input type="text" id="valor" name="valor" required="required" value="<c:out value="${conta.valor}" />"></td>
                 </tr>
                 <tr align="center">
                     <td colspan="2"><br><br>

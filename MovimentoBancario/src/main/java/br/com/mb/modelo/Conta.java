@@ -5,46 +5,35 @@
  */
 package br.com.mb.modelo;
 
-import java.sql.Date;
-
 /**
  *
  * @author ResVUT42
  */
 public class Conta {
     
-    private int conta;
-    private double saldo;
-    private Date dtLcto;
-
+    private int nConta;
+    private double valor;
+   
+    
     public Conta() {
-        this.conta = 0;
-        this.dtLcto = null;
-        this.saldo = 0;
+        this.nConta = 0;
+        this.valor = 0;
     }
 
-    public int getConta() {
-        return conta;
+    public int getNConta() {
+        return nConta;
     }
 
-    public void setConta(int conta) {
-        this.conta = conta;
+    public void setNConta(int nConta) {
+        this.nConta = nConta;
     }
 
-    public double getSaldo() {
-        return saldo;
+    public double getValor() {
+        return valor;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-
-    public Date getDtLcto() {
-        return dtLcto;
-    }
-
-    public void setDtLcto(Date dtLcto) {
-        this.dtLcto = dtLcto;
+    public void setValor(double valor) {
+        this.valor = valor;
     }
             
 }

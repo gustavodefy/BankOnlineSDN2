@@ -5,7 +5,11 @@
  */
 package Servlets;
 
+import br.com.mb.modelo.Conta;
+import br.com.mb.modelo.Persistir;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,7 +28,8 @@ public class ServletMovimento extends HttpServlet {
     private HttpServletRequest lRequest;
     private HttpServletResponse lResponse;
     
-    
+    private Conta conta;
+    private Persistir persistir;
     
     
     /**
@@ -46,10 +51,17 @@ public class ServletMovimento extends HttpServlet {
         boolean bSacar = request.getParameter("sacar") != null;
         boolean bConsultar = request.getParameter("consultar") != null;        
         
+        persistir = new Persistir();
         
         if(bDepositar){
+            getTela();            
+            persistir.Depositar(conta);                        
         }else if(bSacar){
+            getTela();
+            persistir.Sacar(conta);            
         }else if(bConsultar){
+            int nConta = Integer.parseInt(lRequest.getParameter("nConta"));
+            conta = persistir.Consultar(nConta);
         }
         
         RequestDispatcher view = request.getRequestDispatcher(PRINCIPAL);
@@ -59,6 +71,10 @@ public class ServletMovimento extends HttpServlet {
     
     private void getTela(){
         
+        conta = new Conta();                
+        conta.setNConta(Integer.parseInt(lRequest.getParameter("nConta")));
+        conta.setValor(Double.parseDouble(lRequest.getParameter("valor")));
+
     
     }
 
