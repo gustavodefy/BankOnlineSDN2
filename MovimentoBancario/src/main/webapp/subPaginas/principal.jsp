@@ -11,27 +11,31 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="./css/botoes.css" type= "text/css">
         <link rel="stylesheet" href="./css/principal.css" type= "text/css">
-        <title>JSP Page</title>
+        <title>Movimento Bancário</title>
     </head>
     <body>
-        <table width="641" border="0" align="center">
-            <tr>
-                <td colspan="2"><div align="center"><img src="./img/logobankonline.png" width="710" height="181"></div></td>
-            </tr>
-            <tr>
-                <td width="200"><div align="right">Conta</div></td>
-                <td width="338"><input type="text" id="nome" name="nome" required="required"></td>
-            </tr>
-            <tr>
-                <td><div align="right">Valor</div></td>
-                <td><input type="text" id="nome" name="nome" required="required"></td>
-            </tr>
-            <tr align="center">
-                <td colspan="2"><br><br><a href="#" class="depositar">Depositar</a>
-                    <a href="#" class="sacar">Sacar</a>
-                    <a href="#" class="consultar">Consultar</a></td>
-            </tr>
-        </table>
+        <form method="POST" action="ServletMovimento">
+            <table width="641" border="0" align="center">
+                <tr>
+                    <td colspan="2"><div align="center"><img src="./img/logobankonline.png" width="710" height="181"></div></td>
+                </tr>
+                <tr>
+                    <td width="200"><div align="right">Conta</div></td>
+                    <td width="338"><input type="text" id="nome" name="nome" required="required"></td>
+                </tr>
+                <tr>
+                    <td><div align="right">Valor</div></td>
+                    <td><input type="text" id="nome" name="nome" required="required"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><br><br>
+                        <input class="depositar" type="submit" value="depositar" id="depositar" name="depositar">
+                        <input class="sacar"     type="submit" value="sacar"     id="sacar"     name="sacar">
+                        <input class="consultar" type="submit" value="consultar" id="consultar" name="consultar">
+                    </td>
+                </tr>
+            </table>
+        </form>            
         <p><br><table width="800" align="center">
             <nav>
                 <tr class="menu">
