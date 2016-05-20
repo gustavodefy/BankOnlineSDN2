@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servlets;
+package br.com.mb.servlets;
 
 import br.com.mb.modelo.Conta;
 import br.com.mb.modelo.Persistir;
