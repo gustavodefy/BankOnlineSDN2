@@ -24,7 +24,7 @@ public class Persistir {
 
             //Se ainda não existe a conta
             if (this.conta == null) {
-                dao.salvar(contaEntrada);
+                dao.inserir(contaEntrada);
             } else {
                 this.conta.somaValor(contaEntrada.getValor());
                 dao.alterar(this.conta);

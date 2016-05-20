@@ -7,6 +7,9 @@ package br.com.mb.dao;
 
 import br.com.mb.modelo.Conta;
 import java.io.IOException;
+import org.elasticsearch.client.Client;
+import org.elasticsearch.common.xcontent.XContentBuilder;
+import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
 /**
  *
@@ -14,7 +17,19 @@ import java.io.IOException;
  */
 public class Dao {
 
-    public void salvar(Conta conta) throws IOException {
+    Client client = ClientService.conectar();
+
+    public void inserir(Conta conta) throws IOException {
+
+        XContentBuilder jsonBuilder = jsonBuilder()
+                .startObject()
+                    .field("numeroConta", conta.getNConta())
+                    .field("valor", conta.getValor())
+                .endObject();
+        
+        client.prepareIndex("banco", "contacorrente")
+                .setSource(jsonBuilder)
+                .execute().actionGet();
 
     }
 
@@ -29,5 +44,3 @@ public class Dao {
     }
 
 }
-
-
