@@ -35,5 +35,13 @@ public class Conta {
     public void setValor(double valor) {
         this.valor = valor;
     }
+    
+    public void somaValor(double valor){    
+        this.valor = this.valor + valor;
+    }
+    
+    public void diminuiValor(double valor){
+        this.valor = this.valor - valor;
+    }
             
 }

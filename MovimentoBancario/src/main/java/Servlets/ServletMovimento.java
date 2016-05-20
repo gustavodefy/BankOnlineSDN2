@@ -8,8 +8,6 @@ package Servlets;
 import br.com.mb.modelo.Conta;
 import br.com.mb.modelo.Persistir;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,14 +22,13 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ServletMovimento", urlPatterns = {"/ServletMovimento"})
 public class ServletMovimento extends HttpServlet {
 
-    private static String PRINCIPAL = "./subPaginas/principal.jsp";    
+    private static String PRINCIPAL = "./subPaginas/principal.jsp";
     private HttpServletRequest lRequest;
     private HttpServletResponse lResponse;
-    
+
     private Conta conta;
     private Persistir persistir;
-    
-    
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -43,39 +40,44 @@ public class ServletMovimento extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         lRequest = request;
         lResponse = response;
 
         boolean bDepositar = request.getParameter("depositar") != null;
         boolean bSacar = request.getParameter("sacar") != null;
-        boolean bConsultar = request.getParameter("consultar") != null;        
-        
+        boolean bConsultar = request.getParameter("consultar") != null;
+
         persistir = new Persistir();
         
-        if(bDepositar){
-            getTela();            
-            persistir.Depositar(conta);                        
-        }else if(bSacar){
-            getTela();
-            persistir.Sacar(conta);            
-        }else if(bConsultar){
-            int nConta = Integer.parseInt(lRequest.getParameter("nConta"));
-            conta = persistir.Consultar(nConta);
+        try {
+
+            if (bDepositar) {
+                getTela();
+                persistir.Depositar(conta);
+            } else if (bSacar) {
+                getTela();
+                persistir.Sacar(conta);
+            } else if (bConsultar) {
+                int nConta = Integer.parseInt(lRequest.getParameter("nConta"));
+                conta = persistir.Consultar(nConta);
+            }
+            
+        } catch (Exception e) {
+            
         }
         
         RequestDispatcher view = request.getRequestDispatcher(PRINCIPAL);
         view.forward(request, response);
-        
+
     }
-    
-    private void getTela(){
-        
-        conta = new Conta();                
+
+    private void getTela() {
+
+        conta = new Conta();
         conta.setNConta(Integer.parseInt(lRequest.getParameter("nConta")));
         conta.setValor(Double.parseDouble(lRequest.getParameter("valor")));
 
-    
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
