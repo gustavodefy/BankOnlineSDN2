@@ -20,7 +20,7 @@ public class Persistir {
     public void Depositar(Conta contaEntrada) throws Exception {
         try {
 
-            this.conta = dao.buscar(conta.getNConta());
+            this.conta = dao.buscar(contaEntrada.getNConta());
 
             //Se ainda não existe a conta
             if (this.conta == null) {

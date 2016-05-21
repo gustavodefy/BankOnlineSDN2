@@ -17,9 +17,12 @@ import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
  */
 public class Dao {
 
-    Client client = ClientService.conectar();
+    Client client;
 
-    public void inserir(Conta conta) throws IOException {
+    public void inserir(Conta conta) throws IOException, Exception {
+        
+        ClientService CS = new ClientService();
+        client = CS.conectar();
 
         XContentBuilder jsonBuilder = jsonBuilder()
                 .startObject()
@@ -27,9 +30,12 @@ public class Dao {
                     .field("valor", conta.getValor())
                 .endObject();
         
-        client.prepareIndex("banco", "contacorrente")
-                .setSource(jsonBuilder)
-                .execute().actionGet();
+        client.prepareIndex("banco", "contacorrente","1")
+              .setSource(jsonBuilder)
+              .get();
+                
+        
+        client.close();
 
     }
 
@@ -40,7 +46,7 @@ public class Dao {
     public Conta buscar(int nConta) throws IOException {
         Conta conta = new Conta();
 
-        return conta;
+        return null; //conta;
     }
 
 }

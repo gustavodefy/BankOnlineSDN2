@@ -23,7 +23,7 @@
                 </tr>
                 <tr>
                     <td width="200"><div align="right">Nº Conta</div></td>
-                    <td width="338"><input type="text" id="nconta" name="nconta" required="required" value="<c:out value="${conta.nConta}" />"></td>
+                    <td width="338"><input type="text" id="nConta" name="nConta" required="required" value="<c:out value="${conta.nConta}" />"></td>
                 </tr>
                 <tr>
                     <td><div align="right">Valor</div></td>
