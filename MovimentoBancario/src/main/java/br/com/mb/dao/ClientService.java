@@ -5,8 +5,10 @@
  */
 package br.com.mb.dao;
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import org.elasticsearch.bootstrap.Elasticsearch;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
@@ -19,18 +21,17 @@ import org.elasticsearch.common.transport.TransportAddress;
  */
 public class ClientService {
 
-    public Client conectar() throws UnknownHostException, Exception {
+    public Client conectar() throws UnknownHostException, Exception,IOException {
         try {
 
-            String nIp = "192.168.1.3";
-            String cluster = "tamagu";
 
-            Settings settings = Settings.settingsBuilder().put("cluster.name", cluster).build();
-            TransportAddress tAddress = new InetSocketTransportAddress(InetAddress.getByName(nIp), 9300);
+            Settings settings = Settings.settingsBuilder().put("cluster.name", "tamagu").build();
+            
+        Client cliente = TransportClient.builder().settings(settings).build()
+                .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.107.215"), 9300));
+        
 
-            Client client = TransportClient.builder().settings(settings).build().addTransportAddress(tAddress);
-
-            return client;
+            return cliente;
         } catch (Exception e) {
             e.printStackTrace();
             throw new Exception(e.getMessage());

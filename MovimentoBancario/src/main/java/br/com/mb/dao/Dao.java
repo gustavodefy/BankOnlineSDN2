@@ -30,7 +30,7 @@ public class Dao {
                     .field("valor", conta.getValor())
                 .endObject();
         
-        client.prepareIndex("banco", "contacorrente","1")
+        client.prepareIndex("banco", "contacorrente")
               .setSource(jsonBuilder)
               .get();
                 
